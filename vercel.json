@@ -4,7 +4,7 @@
   "framework": "nextjs",
   "headers": [
     {
-      "source": "/(.*\\.js)",
+      "source": "/:path*.js",
       "headers": [
         {
           "key": "Cache-Control",
@@ -13,7 +13,7 @@
       ]
     },
     {
-      "source": "/(.*\\.css)",
+      "source": "/:path*.css",
       "headers": [
         {
           "key": "Cache-Control",
@@ -22,7 +22,7 @@
       ]
     },
     {
-      "source": "/(.*\\.(png|jpg|jpeg|svg|gif|webp|json|woff|woff2))",
+      "source": "/:path*.(png|jpg|jpeg|svg|gif|webp|json|woff|woff2)",
       "headers": [
         {
           "key": "Cache-Control",
