@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Icon } from '@iconify/react'
 import BlogCard from './blogCard'
 import { getAllPosts } from '@/utils/markdown'
+import type { Blog } from '@/types/blog'
 
 const Blog: React.FC = () => {
   const posts = getAllPosts([
@@ -11,7 +12,7 @@ const Blog: React.FC = () => {
     'excerpt',
     'coverImage',
     'slug',
-  ]).slice(0, 3)
+  ]).slice(0, 3) as unknown as Blog[]
 
   return (
     <section className='flex flex-wrap justify-center py-24 ' id='blog'>

@@ -4,6 +4,14 @@ import { join } from "path";
 
 const postsDirectory = join(process.cwd(), "markdown/Blog");
 
+export type PostData = {
+  title?: string;
+  slug?: string;
+  excerpt?: string;
+  coverImage: string;
+  date: string;
+};
+
 export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
 }
